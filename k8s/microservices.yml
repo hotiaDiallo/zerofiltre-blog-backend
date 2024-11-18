@@ -29,7 +29,7 @@ spec:
           ports:
             - containerPort: 6379
         - name: zerofiltretech-blog-api
-          image: imzerofiltre/zerofiltretech-blog:16_imphilippesimo
+          image: fabricemicoli/zerofiltre-blog:16_imphilippesimo
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
