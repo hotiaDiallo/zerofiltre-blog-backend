@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: zerofiltretech-${env_name}
+  namespace: hotiadiallo95
   name: zerofiltretech-blog-${env_name}
 spec:
   minReadySeconds: 30
@@ -45,7 +45,7 @@ spec:
           ports:
             - containerPort: 6379
         - name: zerofiltretech-blog-${env_name}
-          image: imzerofiltre/zerofiltretech-blog:${tag_number}_${docker_tag_suffix}
+          image: selftaughdevops/zerofiltretech-blog:${tag_number}_${docker_tag_suffix}
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
@@ -249,7 +249,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  namespace: zerofiltretech-${env_name}
+  namespace: hotiadiallo95
   name: zerofiltretech-blog-${env_name}
 spec:
   ports:
@@ -262,7 +262,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: zerofiltretech-${env_name}
+  namespace: hotiadiallo95
   name: zerofiltretech-blog-${env_name}
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /

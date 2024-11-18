@@ -6,7 +6,7 @@ ARG PROFILE=dev
 
 WORKDIR /opt/app
 
-# Copy the opentelemetry jar agent into the container
+COPY opentelemetry-javaagent.jar /opt/app/opentelemetry-javaagent.jar
 
 COPY ${JAR_FILE} blog.jar
 
